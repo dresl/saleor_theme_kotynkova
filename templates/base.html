@@ -29,60 +29,9 @@
   {% render_bundle 'storefront' 'css' attrs='async' %}
 
   {% block stylesheet %}{% endblock stylesheet %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
-  <style type="text/css">
-button.slick-arrow {
-    top: 50vh;
-}
-#pictureModalFullscreen .modal-lg {
-    max-width: 90%;
-    margin-top: 5px;
-}
-.search-tab .product-filters .btn-order {
-    width: auto;
-    margin-left: 98px;
-    padding: 0px 15px;
-}
-.categories .top-panel .btn-search {
-    left: 0;
-}
-.product-filters {
-    padding-bottom: 0px;
-}
-.bootstrap-select.btn-group .dropdown-menu li a {
-    color: #656565;
-}
-.bootstrap-select.btn-group .dropdown-menu li a:hover {
-    color: #333333;
-}
-.categories .similar-images-preview .slick-slide {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    min-height: auto!important;
-    padding: 0px;
-}
-.object-image.slick-slide .title {
-    cursor: pointer;
-    text-align: left;
-}
-.object-image.slick-slide.is-active {
-    box-shadow: none;
-}
-.object-image.slick-slide.is-active .title {
-    text-shadow: 0px 0px 10px #7d7d7d;
-}
-.object-image.slick-slide.is-active img {
-    border: 2px solid #333;
-}
-
-.btn.disabled,
-.btn:disabled {
-    cursor: not-allowed;
-}
-  </style>
   {% block meta_tags %}
     <meta property="og:title" content="{{ site.settings.translated.header_text }}">
     <meta property="og:description" content="{{ site.settings.translated.description }}">
