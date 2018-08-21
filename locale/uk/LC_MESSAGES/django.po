@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-19 11:28-0500\n"
+"POT-Creation-Date: 2018-08-21 12:53-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,51 +19,51 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: templates/base.html:134 templates/base.html:217
+#: templates/base.html:132 templates/base.html:215
 msgctxt "Main navigation item"
 msgid "Your Cart"
 msgstr ""
 
-#: templates/base.html:159
+#: templates/base.html:157
 msgctxt "Hamburger button text"
 msgid "menu"
 msgstr ""
 
-#: templates/base.html:176
+#: templates/base.html:174
 msgid "Search for product"
 msgstr ""
 
-#: templates/base.html:224 templates/menu_full.html:21
+#: templates/base.html:222 templates/menu_full.html:21
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:229
+#: templates/base.html:227
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr ""
 
-#: templates/base.html:235 templates/menu_full.html:27
+#: templates/base.html:233 templates/menu_full.html:27
 msgctxt "Main navigation item"
 msgid "Your account"
 msgstr ""
 
-#: templates/base.html:241 templates/menu_full.html:32
+#: templates/base.html:239 templates/menu_full.html:32
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr ""
 
-#: templates/base.html:247 templates/menu_full.html:38
+#: templates/base.html:245 templates/menu_full.html:38
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:253 templates/menu_full.html:44
+#: templates/base.html:251 templates/menu_full.html:44
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:258 templates/menu_full.html:48
+#: templates/base.html:256 templates/menu_full.html:48
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr ""
@@ -96,6 +96,56 @@ msgstr ""
 #: templates/cart_dropdown.html:67 templates/checkout/index.html:93
 msgctxt "Empty cart link"
 msgid "Check out our sales"
+msgstr ""
+
+#: templates/checkout/details.html:7
+msgctxt "Checkout page title"
+msgid "Checkout"
+msgstr ""
+
+#: templates/checkout/details.html:12
+msgctxt "Checkout top message"
+msgid "Easy and secure!"
+msgstr ""
+
+#: templates/checkout/details.html:20
+msgctxt "Checkout title"
+msgid "Checkout"
+msgstr ""
+
+#: templates/checkout/details.html:36
+msgctxt "Order review title"
+msgid "Order review"
+msgstr ""
+
+#: templates/checkout/details.html:52
+msgctxt "Order review section"
+msgid "Subtotal"
+msgstr ""
+
+#: templates/checkout/details.html:62
+msgctxt "Order review section"
+msgid "Shipment"
+msgstr ""
+
+#: templates/checkout/details.html:78
+msgctxt "Order review section title"
+msgid "Taxes (included)"
+msgstr ""
+
+#: templates/checkout/details.html:80
+msgctxt "Order review section title"
+msgid "Taxes"
+msgstr ""
+
+#: templates/checkout/details.html:90
+msgctxt "Order review section title"
+msgid "Promo code"
+msgstr ""
+
+#: templates/checkout/details.html:96
+msgctxt "Order review section title"
+msgid "Total"
 msgstr ""
 
 #: templates/checkout/index.html:7
@@ -192,12 +242,13 @@ msgstr ""
 
 #: templates/product/_fullscreen_products.html:35
 #: templates/product/_product_list_banner.html:50
-#: templates/product/_product_list_grid.html:26
+#: templates/product/_product_list_grid.html:27
 msgid "Reserve"
 msgstr ""
 
 #: templates/product/_fullscreen_products.html:37
 #: templates/product/_product_list_banner.html:52
+#: templates/product/_product_list_grid.html:29
 msgid "Order copy"
 msgstr ""
 
