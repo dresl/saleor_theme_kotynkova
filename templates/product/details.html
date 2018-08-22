@@ -10,6 +10,7 @@
 {% load staticfiles thumbnail %}
 {% load taxed_prices %}
 {% load render_bundle from webpack_loader %}
+{% get_current_language as LANGUAGE_CODE %}
 
 {% block title %}
   {% if product.seo_title %}
@@ -95,6 +96,20 @@
       {% if availability.available %}
         {% if show_variant_picker %}
           <div id="variant-price-component"></div>
+          <script type="text/javascript">
+            {% if LANGUAGE_CODE == "cs" %}
+            jQuery(function($) {
+              setTimeout(function(){
+                {% if site.settings.display_gross_prices %}
+                var VAT_INFO = "včetně DPH"
+                {% else %}
+                var VAT_INFO = "nezahrnuje DPH"
+                {% endif %}
+                $("#variant-price-component .product__info__price > small").text(VAT_INFO);
+              }, 200);
+            });
+            {% endif %}
+          </script>
         {% else %}
           <h2 class="product__info__price">
             <span>{% price_range availability.price_range %}</span>
@@ -112,15 +127,10 @@
             {% endif %}
             {% if request.taxes %}
               <small>
-                {% tax_rate request.taxes product.tax_rate as tax_rate %}
                 {% if site.settings.display_gross_prices %}
-                  {% blocktrans trimmed with tax_rate=tax_rate context "Product details page vat rate value" %}
-                    including {{ tax_rate }}% VAT
-                  {% endblocktrans %}
+                  
                 {% else %}
-                  {% blocktrans trimmed with tax_rate=tax_rate context "Product details page vat rate value" %}
-                    excluding {{ tax_rate }}% VAT
-                  {% endblocktrans %}
+                  
                 {% endif %}
               </small>
             {% endif %}

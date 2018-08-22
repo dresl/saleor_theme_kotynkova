@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-21 12:53-0500\n"
+"POT-Creation-Date: 2018-08-22 07:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,51 +20,51 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: templates/base.html:132 templates/base.html:215
+#: templates/base.html:82 templates/base.html:165
 msgctxt "Main navigation item"
 msgid "Your Cart"
 msgstr ""
 
-#: templates/base.html:157
+#: templates/base.html:107
 msgctxt "Hamburger button text"
 msgid "menu"
 msgstr ""
 
-#: templates/base.html:174
+#: templates/base.html:124
 msgid "Search for product"
 msgstr ""
 
-#: templates/base.html:222 templates/menu_full.html:21
+#: templates/base.html:172 templates/menu_full.html:21
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:227
+#: templates/base.html:177
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr ""
 
-#: templates/base.html:233 templates/menu_full.html:27
+#: templates/base.html:183 templates/menu_full.html:27
 msgctxt "Main navigation item"
 msgid "Your account"
 msgstr ""
 
-#: templates/base.html:239 templates/menu_full.html:32
+#: templates/base.html:189 templates/menu_full.html:32
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr ""
 
-#: templates/base.html:245 templates/menu_full.html:38
+#: templates/base.html:195 templates/menu_full.html:38
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:251 templates/menu_full.html:44
+#: templates/base.html:201 templates/menu_full.html:44
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:256 templates/menu_full.html:48
+#: templates/base.html:206 templates/menu_full.html:48
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr ""
@@ -216,17 +216,17 @@ msgctxt "Product list page filters"
 msgid "Clear filters"
 msgstr ""
 
-#: templates/product/_filters.html:60
+#: templates/product/_filters.html:67
 msgctxt "Product price filter"
 msgid "from"
 msgstr ""
 
-#: templates/product/_filters.html:62
+#: templates/product/_filters.html:69
 msgctxt "Product price filter"
 msgid "to"
 msgstr ""
 
-#: templates/product/_filters.html:68
+#: templates/product/_filters.html:75
 msgctxt "Apply filters button"
 msgid "Update"
 msgstr ""
@@ -257,7 +257,7 @@ msgstr ""
 msgid "Displayed"
 msgstr ""
 
-#: templates/product/_fullscreen_products.html:96
+#: templates/product/_fullscreen_products.html:117
 #: templates/product/details.html:83
 msgid "Close"
 msgstr ""
@@ -276,33 +276,29 @@ msgid "Edit in dashboard"
 msgstr ""
 
 #: templates/product/details.html:117
-#, python-format
-msgctxt "Product details page vat rate value"
-msgid "including %(tax_rate)s%% VAT"
+msgid "including VAT"
 msgstr ""
 
-#: templates/product/details.html:121
-#, python-format
-msgctxt "Product details page vat rate value"
-msgid "excluding %(tax_rate)s%% VAT"
+#: templates/product/details.html:119
+msgid "excluding VAT"
 msgstr ""
 
-#: templates/product/details.html:145
+#: templates/product/details.html:141
 msgctxt "Product details primary action"
 msgid "Add to cart"
 msgstr ""
 
-#: templates/product/details.html:157
+#: templates/product/details.html:153
 msgctxt "Product details text"
 msgid "This product is currently <strong>unavailable</strong>."
 msgstr ""
 
-#: templates/product/details.html:161
+#: templates/product/details.html:157
 msgctxt "Product details title"
 msgid "Description"
 msgstr ""
 
-#: templates/product/details.html:181
+#: templates/product/details.html:177
 msgid "This product variant is not in stock."
 msgstr ""
 
