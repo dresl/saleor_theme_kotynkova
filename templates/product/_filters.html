@@ -37,9 +37,16 @@
           {% elif field.name == 'price' %}
           {% elif field.name == 'obraz-typ' %}
           {% else %}
-            <div class="filter-product col-md-2" title="{{ field.label }}">
+            <div class="filter-product" title="{{ field.label }}">
                 {{ field }}
             </div>
+          {% endif %}
+          {% if forloop.last %}
+          <div class="filter-product search-name" title="Name">
+            <div class="btn-group">
+              <input class="" type="text" name="name" placeholder="Hledat..." value="{% if request.GET.name %}{{ request.GET.name }}{% endif %}">
+            </div>
+          </div>
           {% endif %}
         {% endfor %}
         {% for field in filter_set.form %}

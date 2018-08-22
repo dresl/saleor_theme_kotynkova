@@ -62,6 +62,27 @@
                     {% include "product/_filters.html" %}
                     </div>
                 </div>
+                <div class="project-categories">
+                {% for category in project_categories %}
+                    <div class="col-md-1 item {% if category.translated.slug in request.path %}active{% endif %}">
+                        <span class="title">{{ category.translated }}</span>
+                        {% thumbnail category.background_image "200x100" crop="center" format="PNG" as cat_image %}
+                        <a href="{{ category.get_absolute_url }}"><img class="" src="{{ cat_image.url }}" /></a>
+                        {% endthumbnail %}
+                    </div>
+                {% endfor %}    
+                    <div class="col-md-2 item link-all-pictures {% if not object.parent %}active{% endif %}">
+                        {% if object.parent %}
+                        <a href="{{ object.parent.get_absolute_url }}" class="title">Všechny obrazy
+                        <img src="{% static 'img/glyphicons-pictures.png' %}">
+                        </a>
+                        {% else %}
+                        <span class="title">Všechny obrazy</span>
+                        <img src="{% static 'img/glyphicons-pictures.png' %}">
+                        {% endif %}
+                    </div>
+                </div>
+                <hr>
                 <ul class="categories-menu similar-images-preview">
                 {% for sim_item, available in picture_list %}
                     <div class="object-image">
@@ -251,7 +272,7 @@ jQuery(function($) {
             hideInfoPanel();
         });
         $(".panel-more-info").mouseover(function(){
-            setTimeout(function(){
+            $(function(){
                 clearTimeout(infoTimeOut);
             });
         });
@@ -261,7 +282,7 @@ jQuery(function($) {
             hideCategoriesPanel();
         });
         $(".categories").mouseover(function(){
-            setTimeout(function(){
+            $(function(){
                 clearTimeout(categoriesTimeOut);
             });
         });
@@ -273,7 +294,7 @@ jQuery(function($) {
     $(function(){
         $('.similar-images-preview')
         .on('init', function(event, slick) {
-            $(".slick-slide[data-slick-index='" + $(".main-content").attr("slick-active-index")).addClass('is-active');
+            $(".slick-slide[data-slick-index='" + $(".maincontent").attr("slick-active-index")).addClass('is-active');
         })
         .slick({
             swipeToSlide: true,
@@ -306,7 +327,7 @@ jQuery(function($) {
         });
         /* sync sliders */
         $('.main-images-preview').on('afterChange', function(event, slick, currentSlide) {
-            $('.similar-images-preview').slick('slickGoTo', $(".main-content").attr("slick-active-index"));
+            $('.similar-images-preview').slick('slickGoTo', $(".maincontent").attr("slick-active-index"));
             var currrentNavSlideElem = '.similar-images-preview .slick-slide[data-slick-index="' + currentSlide + '"]';
             $('.similar-images-preview .slick-slide.is-active').removeClass('is-active');
             $(currrentNavSlideElem).addClass('is-active');
